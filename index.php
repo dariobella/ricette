@@ -23,8 +23,11 @@
     <h2> Le tue ricette </h2>
 </div>
 
-<div class="recipeCard">
-    <img src="pics/gnocchi.jpg"> <h4>Gnocchi di patate</h4>
+<div class="centering">
+    <input type="text">
+    <div class="recipeCard">
+        <img src="pics/gnocchi.jpg"> <h4>Gnocchi di patate</h4>
+    </div>
 </div>
 
 <div class="centerAddBtn">

@@ -43,8 +43,18 @@ button {
     font-size: 5em;
 }
 
+.centering {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .recipeCard {
     border: 2px solid #bababa;
     border-radius: 20px;
-    height: ;
+    width: 90%;
+}
+
+.recipeCard img {
+    width: 20%;
 }
