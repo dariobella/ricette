@@ -23,15 +23,108 @@
     <h2> Le tue ricette </h2>
 </div>
 
-<div class="centering">
-    <input type="text">
-    <div class="recipeCard">
-        <img src="pics/gnocchi.jpg"> <h4>Gnocchi di patate</h4>
+<div class="body">
+    <div class="searchBar">
+        <input type="text" id="search" placeholder="Search">
+        <button id="searchBtn" onclick="alert('cerchiaml')"> <span class="material-icons">search</span> </button>
     </div>
+    <div class="recipeCard">
+        <div class="recipeDesc">
+            <img src="pics/gnocchi.jpg">
+            <div class="descText">
+                <b>Tipo: </b> <span>Pranzo</span> <br>
+                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
+                <b>Durata: </b> <span>2 ore 30 min</span> <br>
+            </div>
+        </div>
+        <div>
+            <h4>Gnocchi di patate</h4>
+        </div>
+    </div>
+    <div class="recipeCard">
+        <div class="recipeDesc">
+            <img src="pics/gnocchi.jpg">
+            <div class="descText">
+                <b>Tipo: </b> <span>Pranzo</span> <br>
+                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
+                <b>Durata: </b> <span>2 ore 30 min</span> <br>
+            </div>
+        </div>
+        <div>
+            <h4>Gnocchi di patate</h4>
+        </div>
+    </div>
+    <div class="recipeCard">
+        <div class="recipeDesc">
+            <img src="pics/gnocchi.jpg">
+            <div class="descText">
+                <b>Tipo: </b> <span>Pranzo</span> <br>
+                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
+                <b>Durata: </b> <span>2 ore 30 min</span> <br>
+            </div>
+        </div>
+        <div>
+            <h4>Gnocchi di patate</h4>
+        </div>
+    </div>
+    <div class="recipeCard">
+        <div class="recipeDesc">
+            <img src="pics/gnocchi.jpg">
+            <div class="descText">
+                <b>Tipo: </b> <span>Pranzo</span> <br>
+                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
+                <b>Durata: </b> <span>2 ore 30 min</span> <br>
+            </div>
+        </div>
+        <div>
+            <h4>Gnocchi di patate</h4>
+        </div>
+    </div>
+    <div class="recipeCard">
+        <div class="recipeDesc">
+            <img src="pics/gnocchi.jpg">
+            <div class="descText">
+                <b>Tipo: </b> <span>Pranzo</span> <br>
+                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
+                <b>Durata: </b> <span>2 ore 30 min</span> <br>
+            </div>
+        </div>
+        <div>
+            <h4>Gnocchi di patate</h4>
+        </div>
+    </div>
+    <div class="recipeCard">
+        <div class="recipeDesc">
+            <img src="pics/gnocchi.jpg">
+            <div class="descText">
+                <b>Tipo: </b> <span>Pranzo</span> <br>
+                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
+                <b>Durata: </b> <span>2 ore 30 min</span> <br>
+            </div>
+        </div>
+        <div>
+            <h4>Gnocchi di patate</h4>
+        </div>
+    </div>
+    <div class="recipeCard">
+        <div class="recipeDesc">
+            <img src="pics/gnocchi.jpg">
+            <div class="descText">
+                <b>Tipo: </b> <span>Pranzo</span> <br>
+                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
+                <b>Durata: </b> <span>2 ore 30 min</span> <br>
+            </div>
+        </div>
+        <div>
+            <h4>Gnocchi di patate</h4>
+        </div>
+    </div>
+    <div id="blank"></div>
 </div>
 
 <div class="centerAddBtn">
-    <button id="addBtn" onclick="alert('aggiungiaml')"> <span class="material-icons">add_circle</span> </button>
+    <button id="addBtn" onclick="alert('aggiungiaml')"> <span class="material-icons">add</span> </button>
 </div>
+
 </body>
 </html>
