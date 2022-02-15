@@ -1,5 +1,5 @@
 <?php
-
+require_once "authorize.php";
 ?>
 
 <!DOCTYPE HTML>
@@ -25,87 +25,12 @@
 
 <div class="body">
     <div class="searchBar">
-        <input type="text" id="search" placeholder="Search">
-        <button id="searchBtn" onclick="alert('cerchiaml')"> <span class="material-icons">search</span> </button>
+        <form method="post" id="searchForm" action="">
+            <input type="text" id="search" placeholder="Search">
+            <button id="searchBtn" onclick="alert('cerchiaml')"> <span class="material-icons">search</span> </button>
+        </form>
     </div>
-    <div class="recipeCard">
-        <div class="recipeDesc">
-            <img src="pics/gnocchi.jpg">
-            <div class="descText">
-                <b>Tipo: </b> <span>Pranzo</span> <br>
-                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
-                <b>Durata: </b> <span>2 ore 30 min</span> <br>
-            </div>
-        </div>
-        <div>
-            <h4>Gnocchi di patate</h4>
-        </div>
-    </div>
-    <div class="recipeCard">
-        <div class="recipeDesc">
-            <img src="pics/gnocchi.jpg">
-            <div class="descText">
-                <b>Tipo: </b> <span>Pranzo</span> <br>
-                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
-                <b>Durata: </b> <span>2 ore 30 min</span> <br>
-            </div>
-        </div>
-        <div>
-            <h4>Gnocchi di patate</h4>
-        </div>
-    </div>
-    <div class="recipeCard">
-        <div class="recipeDesc">
-            <img src="pics/gnocchi.jpg">
-            <div class="descText">
-                <b>Tipo: </b> <span>Pranzo</span> <br>
-                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
-                <b>Durata: </b> <span>2 ore 30 min</span> <br>
-            </div>
-        </div>
-        <div>
-            <h4>Gnocchi di patate</h4>
-        </div>
-    </div>
-    <div class="recipeCard">
-        <div class="recipeDesc">
-            <img src="pics/gnocchi.jpg">
-            <div class="descText">
-                <b>Tipo: </b> <span>Pranzo</span> <br>
-                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
-                <b>Durata: </b> <span>2 ore 30 min</span> <br>
-            </div>
-        </div>
-        <div>
-            <h4>Gnocchi di patate</h4>
-        </div>
-    </div>
-    <div class="recipeCard">
-        <div class="recipeDesc">
-            <img src="pics/gnocchi.jpg">
-            <div class="descText">
-                <b>Tipo: </b> <span>Pranzo</span> <br>
-                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
-                <b>Durata: </b> <span>2 ore 30 min</span> <br>
-            </div>
-        </div>
-        <div>
-            <h4>Gnocchi di patate</h4>
-        </div>
-    </div>
-    <div class="recipeCard">
-        <div class="recipeDesc">
-            <img src="pics/gnocchi.jpg">
-            <div class="descText">
-                <b>Tipo: </b> <span>Pranzo</span> <br>
-                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
-                <b>Durata: </b> <span>2 ore 30 min</span> <br>
-            </div>
-        </div>
-        <div>
-            <h4>Gnocchi di patate</h4>
-        </div>
-    </div>
+
     <div class="recipeCard">
         <div class="recipeDesc">
             <img src="pics/gnocchi.jpg">
