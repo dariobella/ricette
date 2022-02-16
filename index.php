@@ -19,8 +19,10 @@ require_once "authorize.php";
 </head>
 <body>
 
-<div class="topbar">
+<div class="topbar" id="indexTopbar">
+    <div class="left"></div>
     <h2> Le tue ricette </h2>
+    <div class="right"> <button id="logoutBtn" onclick="location='login_r.php'"> <span class="material-icons">logout</span> </button> </div>
 </div>
 
 <div class="body">
@@ -48,7 +50,7 @@ require_once "authorize.php";
 </div>
 
 <div class="centerAddBtn">
-    <button id="addBtn" onclick="alert('aggiungiaml')"> <span class="material-icons">add</span> </button>
+    <button id="addBtn" onclick="location='add.php'"> <span class="material-icons">add</span> </button>
 </div>
 
 </body>

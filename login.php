@@ -28,8 +28,8 @@ require_once "config.php";
         <input type="text" id="username" name="username" placeholder="Username">
         <input type="password" id="psw" name="psw" placeholder="Password">
         <div class="formBtns">
-            <button type="reset">Reset</button>
             <button type="submit">Login</button>
+            <button type="reset">Reset</button>
         </div>
     </form>
     <nobr> New here? <a href="register.php">Register</a> </nobr>

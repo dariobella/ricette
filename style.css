@@ -15,19 +15,49 @@ button {
     padding: 10px;
 }
 
+label {
+    width: 7em;
+    display: inline-block;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 .topbar {
+    width: 100%;
     height: 12%;
-    min-height: 46px;
+    min-height: 66px;
     color: white;
     background-color: #4aaa66;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
+    justify-content: center;
+    align-items: end;
+}
+
+#indexTopbar {
+    justify-content: space-between;
 }
 
 .topbar h2 {
     margin: 10px;
+    white-space: nowrap;
+}
+
+.topbar .right {
+    width: 33%;
+    display: flex;
+    justify-content: right;
+    padding-right: 0.5em;
+}
+
+.topbar #logoutBtn {
+    padding: 0;
+    margin: 10px;
+}
+
+.topbar .left {
+    width: 33%;
 }
 
 .centerAddBtn {
@@ -48,7 +78,7 @@ button {
 }
 
 #addBtn span {
-    font-size: 5em;
+    font-size: 4em;
 }
 
 .body {
@@ -96,7 +126,7 @@ button {
 }
 
 form input {
-    height: 2em;
+    height: 1.5em;
     padding: 8px;
     border-radius: 20px;
     border: 1px solid #cacaca;
@@ -114,12 +144,13 @@ form input {
 }
 
 #loginForm input, #registerForm input {
+    height: 2em;
     margin-top: 20px;
 }
 
 .formBtns {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-self: end;
     margin-top: 20px;
 }

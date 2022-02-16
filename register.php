@@ -42,8 +42,8 @@ if (isset($_SESSION['register_data'])) {
         <input type="password" id="psw" name="psw" placeholder="Password" value="<?= $psw ?>">
         <input type="password" id="confPsw" name="confPsw" placeholder="Confirm Password" value="">
         <div class="formBtns">
-            <button type="reset">Reset</button>
             <button type="submit">Register</button>
+            <button type="reset">Reset</button>
         </div>
     </form>
     <nobr> Already have an account? <a href="login.php">Login</a> </nobr>
