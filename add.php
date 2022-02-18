@@ -57,35 +57,25 @@ if (isset($_SESSION['add_data'])) {
         <br> <br>
 
         <label for="ingredients">Ingredienti: </label> <br>
-        <textarea id="ingredients" name="ingredients"> <?= $ingredients ?> </textarea>
+        <textarea id="ingredients" name="ingredients"><?= $ingredients ?> </textarea>
         <br> <br>
 
         <label for="description">Descrizione: </label> <br>
-        <textarea id="description" name="description"> <?= $description ?> </textarea>
+        <textarea id="description" name="description"><?= $description ?> </textarea>
         <br> <br>
 
         <label for="type">Tipo: </label>
         <select name="type" id="type">
             <option value=""></option>
-            <?php
-            $sel = ($type === 'Colazione') ? 'selected' : '';
-            ?>
+            <?php $sel = ($type === 'Colazione') ? 'selected' : ''; ?>
             <option value="Colazione" <?= $sel ?>>Colazione</option>
-            <?php
-            $sel = ($type === 'Primo') ? 'selected' : '';
-            ?>
+            <?php $sel = ($type === 'Primo') ? 'selected' : ''; ?>
             <option value="Primo" <?= $sel ?>>Primo</option>
-            <?php
-            $sel = ($type === 'Secondo') ? 'selected' : '';
-            ?>
+            <?php $sel = ($type === 'Secondo') ? 'selected' : ''; ?>
             <option value="Secondo" <?= $sel ?>>Secondo</option>
-            <?php
-            $sel = ($type === 'Snack') ? 'selected' : '';
-            ?>
+            <?php $sel = ($type === 'Snack') ? 'selected' : ''; ?>
             <option value="Snack" <?= $sel ?>>Snack</option>
-            <?php
-            $sel = ($type === 'Dessert') ? 'selected' : '';
-            ?>
+            <?php $sel = ($type === 'Dessert') ? 'selected' : ''; ?>
             <option value="Dessert" <?= $sel ?>>Dessert</option>
         </select>
         <br> <br>

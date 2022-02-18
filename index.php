@@ -55,9 +55,9 @@ try {
                     <b>Ingredienti: </b> <span> <?= $r['ingredients'] ?> </span> <br>
                     <b>Durata: </b> 
                     <span> <?php 
-                    
-                        if ($r['hours'] != 0) echo "$r['hours'] ore ";
-                        if ($r['mins'] != 0) echo "$r['mins']  mins ";
+                        $hours = $r['hours']; $mins = $r['mins'];
+                        if ($hours != 0) echo "$hours ore ";
+                        if ($mins != 0) echo "$mins minuti";
                     
                     ?> </span> <br>
                 </div>
