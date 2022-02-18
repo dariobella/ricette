@@ -29,5 +29,4 @@ CREATE TABLE `recipes` (
     `userId` INT NOT NULL , 
     PRIMARY KEY (`id`)
 );
-
 ```

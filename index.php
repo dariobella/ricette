@@ -1,5 +1,17 @@
 <?php
 require_once "authorize.php";
+
+try {
+    $stmt = $db->prepare("
+        SELECT * FROM recipes WHERE userId = :userId
+    ");
+    $stmt->bindParam(':userId', $_SESSION['user']['id']);
+    $stmt->execute();
+} catch (PDOException $e) {
+    echo "Errore: " . $e->getMessage();
+    die;
+}
+
 ?>
 
 <!DOCTYPE HTML>
@@ -33,19 +45,30 @@ require_once "authorize.php";
         </form>
     </div>
 
-    <div class="recipeCard">
-        <div class="recipeDesc">
-            <img src="pics/gnocchi.jpg">
-            <div class="descText">
-                <b>Tipo: </b> <span>Pranzo</span> <br>
-                <b>Ingredienti: </b> <span>Patate, farina, pomodoro</span> <br>
-                <b>Durata: </b> <span>2 ore 30 min</span> <br>
+    <?php while($r = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+    
+        <div class="recipeCard">
+            <div class="recipeDesc">
+                <img src="pics/gnocchi.jpg">
+                <div class="descText">
+                    <b>Tipo: </b> <span> <?= $r['type'] ?> </span> <br>
+                    <b>Ingredienti: </b> <span> <?= $r['ingredients'] ?> </span> <br>
+                    <b>Durata: </b> 
+                    <span> <?php 
+                    
+                        if ($r['hours'] != 0) echo "$r['hours'] ore ";
+                        if ($r['mins'] != 0) echo "$r['mins']  mins ";
+                    
+                    ?> </span> <br>
+                </div>
+            </div>
+            <div>
+                <h4> <?= $r['name'] ?> </h4>
             </div>
         </div>
-        <div>
-            <h4>Gnocchi di patate</h4>
-        </div>
-    </div>
+    
+    <?php endwhile ?>
+
     <div id="blank"></div>
 </div>
 

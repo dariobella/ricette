@@ -40,6 +40,9 @@ button:hover {
 }
 
 .topbar h2 {
+    width: 33%;
+    display: flex;
+    justify-content: center;
     margin: 10px;
     white-space: nowrap;
 }
@@ -54,6 +57,10 @@ button:hover {
 .topbar #logoutBtn {
     padding: 0;
     margin: 10px;
+}
+
+.topbar .backBtn {
+    margin-left: 40px;
 }
 
 .topbar .left {
@@ -132,6 +139,10 @@ form input {
     border: 1px solid #cacaca;
     color: #828282;
     background-color: #f6f6f6;
+}
+
+form input[type="number"] {
+    width: 3em;
 }
 
 form select {

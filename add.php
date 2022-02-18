@@ -2,18 +2,15 @@
 require_once "authorize.php";
 
 if (isset($_SESSION['add_data'])) {
-    $msg  = $_SESSION['add_data']['msg'];
-    $name = $_SESSION['add_data']['title'];
-    $ingredients = $_SESSION['add_data']['genre_id'];
-    $url = $_SESSION['add_data']['year'];
-    $description = $_SESSION['add_data']['price'];
-    $type = $_SESSION['add_data']['authors_id'];
+    $name = $_SESSION['add_data']['name'];
+    $ingredients = $_SESSION['add_data']['ingredients'];
+    $url = $_SESSION['add_data']['url'];
+    $description = $_SESSION['add_data']['description'];
+    $type = $_SESSION['add_data']['type'];
     $hours = $_SESSION['add_data']['hours'];
     $mins = $_SESSION['add_data']['mins'];
-
     unset($_SESSION['add_data']);
 } else {
-    $msg  = '';
     $name = '';
     $ingredients = '';
     $url = '';
@@ -44,12 +41,14 @@ if (isset($_SESSION['add_data'])) {
 <body>
 
 <div class="topbar">
-    <h2> Nuova Ricetta </h2>
+    <div class="left"> <button class="backBtn" onclick="location = 'index.php'"> <span class="material-icons"> arrow_back </span> </button> </div>
+    <h2> Le tue ricette </h2>
+    <div class="right"></div>
 </div>
 
 <div class="body">
     <form method="post" id="addForm" action="add_r.php" enctype="multipart/form-data">
-        <label for="name">Nome: </label>
+        <label for="name">Nome:</label>
         <input type="text" id="name" name="name" value="<?= $name ?>">
         <br> <br>
 
@@ -91,7 +90,7 @@ if (isset($_SESSION['add_data'])) {
         </select>
         <br> <br>
 
-        <label for="hours">Durata: </label> <input name="hours" id="hours" type="number" min="0" size="1" value="<?= $hours ?>"> ore
+        <label for="hours">Durata: </label> <input name="hours" id="hours" type="number" min="0" size="1" value="<?= $hours ?>"> ore &nbsp
         <input name="mins" id="mins" type="number" step="5" min="0" size="2" value="<?= $mins ?>"> minuti
 
         
