@@ -8,7 +8,7 @@ unset($_SESSION['user']);
 
 try {
     $stmt = $db->prepare("
-        SELECT username FROM users
+        SELECT id, username FROM users
         WHERE username=:username AND psw=MD5(CONCAT(:psw, :salt))
     ");
     $stmt->bindParam(':username', $username);

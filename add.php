@@ -92,7 +92,9 @@ if (isset($_SESSION['add_data'])) {
         <br> <br>
 
         <label for="hours">Durata: </label> <input name="hours" id="hours" type="number" min="0" size="1" value="<?= $hours ?>"> ore
-        <input name="mins" id="mins" type="number" min="0" size="2" value="<?= $mins ?>"> minuti
+        <input name="mins" id="mins" type="number" step="5" min="0" size="2" value="<?= $mins ?>"> minuti
+
+        
 
         <div class="formBtns">
             <button type="submit">Aggiungi</button>
