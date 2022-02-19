@@ -13,7 +13,7 @@ $hours = intval($_POST['hours']) ?? 0;
 $mins = intval($_POST['mins']) ?? 0;
 
 
-if ($name == '' || !in_array($type, ['Colazione', 'Primo', 'Secondo', 'Snack', 'Dessert'])) {
+if ($name == '' || !in_array($type, ['', 'Colazione', 'Primo', 'Secondo', 'Snack', 'Dessert'])) {
     $_SESSION['add_data'] = [
         'name'  => $name,
         'ingredients' => $ingredients,
@@ -50,6 +50,13 @@ try {
     $stmt->bindParam(':userId', $_SESSION['user']['id']);
     #var_export($stmt); die;
     $stmt->execute();
+
+
+    $id = $db->lastInsertId();
+    #var_export($id); die;
+    if (isset($_FILES['image']) and $_FILES['image']['error'] == 0) {
+        move_uploaded_file($_FILES['image']['tmp_name'], "pics/$id.png");
+    }
 
 } catch (PDOException $e) {
     echo "Errore: " . $e->getMessage();

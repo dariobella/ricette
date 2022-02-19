@@ -33,7 +33,9 @@ if (isset($_SESSION['register_data'])) {
 <body>
 
 <div class="topbar">
+    <div class="left"></div>
     <h2> Register </h2>
+    <div class="right"></div>
 </div>
 
 <div class="body">

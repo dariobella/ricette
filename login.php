@@ -20,7 +20,9 @@ require_once "config.php";
 <body>
 
 <div class="topbar">
+    <div class="left"></div>
     <h2> Login </h2>
+    <div class="right"></div>
 </div>
 
 <div class="body">

@@ -42,7 +42,7 @@ if (isset($_SESSION['add_data'])) {
 
 <div class="topbar">
     <div class="left"> <button class="backBtn" onclick="location = 'index.php'"> <span class="material-icons"> arrow_back </span> </button> </div>
-    <h2> Le tue ricette </h2>
+    <h2> Nuova Ricetta </h2>
     <div class="right"></div>
 </div>
 
@@ -82,6 +82,11 @@ if (isset($_SESSION['add_data'])) {
 
         <label for="hours">Durata: </label> <input name="hours" id="hours" type="number" min="0" size="1" value="<?= $hours ?>"> ore &nbsp
         <input name="mins" id="mins" type="number" step="5" min="0" size="2" value="<?= $mins ?>"> minuti
+        <br> <br>
+
+        <label for="image">Image</label>
+        <input id="image" type="file" name="image" accept="image/png">
+        <br> <br>
 
         
 

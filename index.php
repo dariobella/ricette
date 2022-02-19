@@ -31,7 +31,7 @@ try {
 </head>
 <body>
 
-<div class="topbar" id="indexTopbar">
+<div class="topbar" id="topbar">
     <div class="left"></div>
     <h2> Le tue ricette </h2>
     <div class="right"> <button id="logoutBtn" onclick="location='login_r.php'"> <span class="material-icons">logout</span> </button> </div>
@@ -47,19 +47,27 @@ try {
 
     <?php while($r = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
     
-        <div class="recipeCard">
+        <div class="recipeCard" onclick="location='detail.php?id=<?= $r['id'] ?>'">
             <div class="recipeDesc">
-                <img src="pics/gnocchi.jpg">
+                <?php if(file_exists("pics/$r[id].png")): ?>
+                    <img src="pics/<?= $r['id'] ?>.png">
+                <?php else: ?>
+                    <img src="pics/foodIcon.png">
+                <?php endif ?>
                 <div class="descText">
                     <b>Tipo: </b> <span> <?= $r['type'] ?> </span> <br>
                     <b>Ingredienti: </b> <span> <?= $r['ingredients'] ?> </span> <br>
                     <b>Durata: </b> 
                     <span> <?php 
                         $hours = $r['hours']; $mins = $r['mins'];
-                        if ($hours != 0) echo "$hours ore ";
-                        if ($mins != 0) echo "$mins minuti";
-                    
-                    ?> </span> <br>
+
+                        if ($hours != 0 && $hours == 1) echo "$hours ora ";
+                        else if ($hours != 0) echo "$hours ore ";
+
+                        if ($mins != 0 && $mins == 1) echo "$mins minuto";
+                        else if ($mins != 0) echo "$mins minuti";
+
+                    ?> </span>
                 </div>
             </div>
             <div>
