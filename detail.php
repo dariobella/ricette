@@ -1,12 +1,14 @@
 <?php
 require_once "authorize.php";
 
+$id = intval($_GET['id'] ?? 0);
+
 try {
     $stmt = $db->prepare("
         SELECT * FROM recipes WHERE userId = :userId AND id = :id
     ");
     $stmt->bindParam(':userId', $_SESSION['user']['id']);
-    $stmt->bindParam(':id', $_GET['id']);
+    $stmt->bindParam(':id', $id);
     $stmt->execute();
 } catch (PDOException $e) {
     echo "Errore: " . $e->getMessage();
@@ -35,7 +37,7 @@ $r = $stmt->fetch(PDO::FETCH_ASSOC);
 <body>
 
 <div class="topbar" id="topbar">
-    <div class="left"><button id="backBtn" onclick="location='index.php'"> <span class="material-icons">arrow_back</span> </button></div>
+    <div class="left"><button class="backBtn" onclick="location='index.php'"> <span class="material-icons">arrow_back</span> </button></div>
     <h2> <?= $r['name'] ?> </h2>
     <div class="right"></div>
 </div>
@@ -71,8 +73,8 @@ $r = $stmt->fetch(PDO::FETCH_ASSOC);
     </div>
 
     <div class="detailBtns">
-        <button id="editBtn" onclick="edit(<?= $r['id'] ?>)"> <b> Edit </b> </button>
-        <button id="deleteBtn" onclick="del(<?= $r['id'] ?>)"> <b> Delete </b> </button>
+        <button id="editBtn" onclick="edit(<?= $id ?>)"> <b> Edit </b> </button>
+        <button id="deleteBtn" onclick="del(<?= $id ?>)"> <b> Delete </b> </button>
     </div>
 
     
@@ -83,12 +85,12 @@ $r = $stmt->fetch(PDO::FETCH_ASSOC);
 <script>
     function del(id) {
         if (confirm('Are you sure you want to delete this recipe?')) {
-            location = "del.php?id=" + id
+            location = "del.php?id=" + id;
         }
     }
 
     function edit(id) {
-        location = "edit.php?id=" + id
+        location = "edit.php?id=" + id;
     }
 </script>
 

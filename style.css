@@ -191,7 +191,7 @@ form textarea {
     background-color: #f6f6f6;
 }
 
-#addForm {
+#addForm, #editForm {
     width: 90%;
     margin-top: 30px;
 }
