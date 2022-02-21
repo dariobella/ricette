@@ -56,7 +56,7 @@ try {
 
     <?php if (in_array(strtolower($search), ['colazione', 'primo', 'secondo', 'snack', 'dessert'])):
 
-        while($r = $stmt->fetch(PDO::FETCH_ASSOC)):
+        while ($r = $stmt->fetch(PDO::FETCH_ASSOC)):
 
             if (strtolower($r['type']) === strtolower($search)): ?>
 
@@ -97,9 +97,9 @@ try {
 
         <div class="searchSection"> Name </div>
 
-        <?php while($r = $stmt->fetch(PDO::FETCH_ASSOC)):
+        <?php while($r = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
 
-            if (strpos(strtolower($r['name']), strtolower($search)) !== false): ?>
+            <?php if (strpos(strtolower($r['name']), strtolower($search)) !== false): ?>
 
                 <div class="recipeCard" onclick="location='detail.php?id=<?= $r['id'] ?>'">
                     <div class="recipeDesc">
@@ -134,9 +134,10 @@ try {
 
         <div class="searchSection"> Ingredients </div>
 
-        <?php while($r = $stmt->fetch(PDO::FETCH_ASSOC)):
+        <?php $stmt->execute(); ?>
+        <?php while($r = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
 
-            if (strpos(strtolower($r['ingredients']), strtolower($search)) !== false): ?>
+            <?php if (strpos(strtolower($r['ingredients']), strtolower($search)) !== false): ?>
 
                 <div class="recipeCard" onclick="location='detail.php?id=<?= $r['id'] ?>'">
                     <div class="recipeDesc">
@@ -171,10 +172,10 @@ try {
 
         <div class="searchSection"> Description </div>
 
+        <?php $stmt->execute(); ?>
+        <?php while($r = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
 
-        <?php while($r = $stmt->fetch(PDO::FETCH_ASSOC)):
-
-            if (strpos(strtolower($r['description']), strtolower($search)) !== false): ?>
+            <?php if (strpos(strtolower($r['description']), strtolower($search)) !== false): ?>
 
                 <div class="recipeCard" onclick="location='detail.php?id=<?= $r['id'] ?>'">
                     <div class="recipeDesc">
@@ -207,8 +208,10 @@ try {
 
         <?php endwhile ?>
 
-
     <?php endif ?>
+
+
+
 
     <div id="blank"></div>
 </div>
