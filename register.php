@@ -2,13 +2,11 @@
 require_once "config.php";
 
 if (isset($_SESSION['register_data'])) {
-    $msg  = $_SESSION['register_data']['msg'];
     $username = $_SESSION['register_data']['username'];
     $psw = $_SESSION['register_data']['psw'];
 
-    unset($_SESSION['add_data']);
+    unset($_SESSION['register_data']);
 } else {
-    $msg  = '';
     $username = '';
     $psw = '';
 }

@@ -39,9 +39,9 @@ try {
 
 <div class="body">
     <div class="searchBar">
-        <form method="post" id="searchForm" action="">
-            <input type="text" id="search" placeholder="Search">
-            <button id="searchBtn" onclick="alert('cerchiaml')"> <span class="material-icons">search</span> </button>
+        <form method="post" id="searchForm" action="search.php">
+            <input type="search" name="search" id="search" placeholder="Search">
+            <button id="searchBtn" type="submit"> <span class="material-icons">search</span> </button>
         </form>
     </div>
 

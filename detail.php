@@ -50,7 +50,12 @@ $r = $stmt->fetch(PDO::FETCH_ASSOC);
         <img src="pics/foodIcon.png">
     <?php endif ?>
     <br>
-    <a href="<?= $r['url'] ?>" target=”_blank”> link alla ricetta </a>
+
+    <?php
+        $onclick = ($r['url'] === '') ? 'return false' : '';
+    ?>
+
+    <a href="<?= $r['url'] ?>" target="_blank" onclick="<?= $onclick ?>"> link alla ricetta </a>
 
     <div class="descText">
         <b>Tipo: </b> <span> <?= $r['type'] ?> </span> <br>

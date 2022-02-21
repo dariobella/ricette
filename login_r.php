@@ -1,6 +1,8 @@
 <?php
 require_once "config.php";
 
+#var_export($_POST); die;
+
 $username = $_POST['username'] ?? '';
 $psw = $_POST['psw'] ?? '';
 
@@ -19,12 +21,9 @@ try {
     if ($user = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
         $_SESSION['user'] = $user;
-        $_SESSION['msg'] = 'Logged in';
 
         header('location: index.php');
         die;
-    } else {
-        $_SESSION['msg'] = "Impossibile accedere";
     }
 
 } catch (PDOException $e) {

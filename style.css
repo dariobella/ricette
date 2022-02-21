@@ -100,6 +100,10 @@ button:hover {
     margin-bottom: 20px;
 }
 
+.recipeCard:hover {
+    cursor: pointer;
+}
+
 .recipeDesc {
     height: 60%;
     display: flex;
@@ -236,6 +240,7 @@ form textarea {
 
 #search {
     width: 100%;
+    font-size: 1.2em;
     margin-top: 20px; margin-bottom: 20px;
     font-weight: bold;
 }
@@ -244,6 +249,16 @@ form textarea {
     width: 3.5em; height: 3em;
     padding: 0.5em;
     margin-left: 10px;
+}
+
+.searchSection {
+    width: 90%;
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    color: #444444;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
 }
 
 #blank {
