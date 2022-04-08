@@ -7,10 +7,10 @@ error_reporting(E_ALL);
 
 session_start();
 
-$dbhost = "10.12.100.10";
-$dbuser = "e5";
-$dbpassword = "r00kieCla55";
-$dbname = "e5_bella_ricette";
+$dbhost = "db";
+$dbuser = "root";
+$dbpassword = "root";
+$dbname = "ricette";
 $securitysalt = '1d6896d08b9a73a26d07a7616d2f4d69';
 
 try {

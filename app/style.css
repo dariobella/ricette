@@ -63,7 +63,7 @@ button:hover {
     width: 33%;
 }
 
-.centerAddBtn {
+.centerBtns {
     position: fixed;
     bottom: 10%;
     width: 100%;
@@ -71,17 +71,27 @@ button:hover {
     justify-content: center;
 }
 
-#addBtn, #searchBtn {
+#addBtn, #searchBtn, #randBtn {
     padding: 0;
-    background-color: #4aaa66;
-    color: white;
-    border: none;
     border-radius: 100%;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
+#addBtn {
+  margin-right: 10px;
+}
+
+#randBtn {
+  margin-left: 10px;
+}
+
 #addBtn span {
     font-size: 4em;
+}
+
+#randBtn span {
+  font-size: 2em;
+  padding: 13px;
 }
 
 .body {

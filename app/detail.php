@@ -47,7 +47,7 @@ $r = $stmt->fetch(PDO::FETCH_ASSOC);
     <?php if(file_exists("pics/$r[id].png")): ?>
         <img src="pics/<?= $r['id'] ?>.png">
     <?php else: ?>
-        <img src="pics/foodIcon.png">
+        <img src="pics/foodIcon.png" style="max-width: 300px">
     <?php endif ?>
     <br>
 
