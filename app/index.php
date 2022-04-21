@@ -82,36 +82,8 @@ try {
 
     <div class="centerBtns">
         <button id="addBtn" onclick="location='add.php'"> <span class="material-icons">add</span> </button>
-        <button id="randBtn" onclick="randomRecipe(); return false"> <span class="material-icons">casino</span> </button>
+        <button id="randBtn" onclick="location='random_r.php'"> <span class="material-icons">casino</span> </button>
     </div>
-
-
-    <script type="text/javascript">
-
-      function randomRecipe() {
-
-        console.log('random')
-
-        <?php
-        
-        try {
-          $stmtr = $db->prepare("
-              SELECT id FROM recipes ORDER BY RAND() LIMIT 1
-          ");
-          $stmtr->execute();
-        } catch (PDOException $e) {
-            echo "Errore: " . $e->getMessage();
-            die;
-        }
-
-        $r = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        var_export($r); die;
-        
-        ?>
-      }
-
-    </script>
 
 
   </body>
